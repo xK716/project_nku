@@ -36,7 +36,7 @@ where:
 
 Foursquare-TKY is a Tokyo-based Foursquare check-in dataset.
 
-The data format is consistent with Foursquare-NK:
+The data format is consistent with Foursquare-NYC:
 
 ```
 user_id    timestamp    latitude    longitude    poi_id
@@ -105,7 +105,7 @@ pip install -r requirement.txt
 
 ## 5. Running Experiments
 
-### Train on Foursquare-NK
+### Train on Foursquare-NYC
 
 ```bash
 python convert.py
@@ -120,7 +120,7 @@ python train.py --dataset checkins-4sq-nyc.txt --offset checkins_4sq_nyc_time_of
 python convert.py
 ```
 ```bash
-python main.py --dataset checkins-4sq-tky.txt --offset checkins_4sq_tky_time_offset.txt --semantic-file poi_semantics_4sq_tky.txt
+python train.py --dataset checkins-4sq-tky.txt --offset checkins_4sq_tky_time_offset.txt --semantic-file poi_semantics_4sq_tky.txt
 ```
 
 Training parameters can be modified in:
